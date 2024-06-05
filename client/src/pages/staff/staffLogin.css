@@ -62,7 +62,7 @@
 @media (max-width: 1160px) {
     .login {
         justify-content: center;
-        padding: 50px 20px;
+        padding: 50px 10px;
         background-position: left;
     }
 }
