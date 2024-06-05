@@ -539,9 +539,9 @@ header img.logo {
   }
 }
 
-.contact {
+.login {
   min-height: 800px;
-  background: url(/contact.jpg) rgba(0, 0, 0, 0.75);
+  background: url(/login.jpg) rgba(0, 0, 0, 0.75);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
@@ -552,27 +552,28 @@ header img.logo {
   padding-right: 7rem;
 }
 
-.contact form {
+.login form {
   background: whitesmoke;
   width: 650px;
   padding: 40px;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
   gap: 40px;
   font-size: 20px;
 }
 
-.contact form div {
+.login form div {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 
-.contact form div label {
+.login form div label {
   font-weight: 500;
 }
 
-.contact form div input {
+.login form div input {
   font-size: 20px;
   padding: 7px 3px;
   border: none;
@@ -580,11 +581,11 @@ header img.logo {
   background: transparent;
 }
 
-.contact form div input:focus {
+.login form div input:focus {
   outline: none;
 }
 
-.contact form button {
+.login form button {
   border: none;
   color: whitesmoke;
   background: #0095ff;
@@ -593,14 +594,14 @@ header img.logo {
   transition: 0.3s;
 }
 
-.contact form button:hover {
+.login form button:hover {
   transition: 0.3s;
   background: #0267af;
   cursor: pointer;
 }
 
 @media (max-width: 1160px) {
-  .contact {
+  .login {
     justify-content: center;
     padding: 50px 20px;
     background-position: left;
