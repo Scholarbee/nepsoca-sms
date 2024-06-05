@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
@@ -57,6 +57,7 @@ function StudentLogin() {
           {loading && <ClipLoader size={20} color="white" />}
           Login
         </button>
+        <Link to={"/"}>Return Home</Link>
       </form>
     </section>
   );

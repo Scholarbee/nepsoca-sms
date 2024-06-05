@@ -3,7 +3,7 @@ import "./staffLogin.css";
 import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function StaffLogin() {
   const navigate = useNavigate();
@@ -59,6 +59,7 @@ function StaffLogin() {
           {loading && <ClipLoader size={20} color="white" />}
           Login
         </button>
+        <Link to={"/"}>Return Home</Link>
       </form>
     </section>
   );
