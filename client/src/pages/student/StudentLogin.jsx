@@ -1,11 +1,12 @@
 import axios from "axios";
+// import "./stdLogin.scss";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
 function StudentLogin() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);

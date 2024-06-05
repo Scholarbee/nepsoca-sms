@@ -1,5 +1,5 @@
 .login {
-    min-height: 800px;
+    min-height: 100vh;
     background: url(/login.jpg) rgba(0, 0, 0, 0.75);
     background-blend-mode: darken;
     background-repeat: no-repeat;
@@ -13,12 +13,12 @@
 
 .login form {
     background: whitesmoke;
-    width: 650px;
+    width: 550px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    gap: 40px;
+    gap: 15px;
     font-size: 20px;
 }
 
