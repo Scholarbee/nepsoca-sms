@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/global/Navbar";
 
 function StaffDashboard() {
   return (
-    <h1>Staff Dashboard</h1>
-  )
+    <>
+      <Navbar/>
+      <h1>Staff Dashboard</h1>
+    </>
+  );
 }
 
-export default StaffDashboard
+export default StaffDashboard;

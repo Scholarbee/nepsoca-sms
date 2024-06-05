@@ -9,7 +9,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.header {
   position: absolute;
   display: flex;
   top: 0;
@@ -24,14 +24,14 @@ header {
 
 }
 
-header p {
+.header p {
   font-family: "Exo 2", sans-serif;
   letter-spacing: 1px;
   word-spacing: 5px;
   color: whitesmoke;
 }
 
-header img.logo {
+.header img.logo {
   height: 50px;
   width: 50px;
   margin-right: 5px;
@@ -99,7 +99,7 @@ header img.logo {
     padding-left: 2.5rem;
   }
 
-  header {
+  .header {
     margin-left: 2.5rem;
   }
 
@@ -151,7 +151,7 @@ header img.logo {
     padding-left: 1rem;
   }
 
-  header {
+  .header {
     margin-left: 1rem;
   }
 
