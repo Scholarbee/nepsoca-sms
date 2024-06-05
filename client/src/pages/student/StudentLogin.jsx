@@ -1,43 +1,25 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
 function StudentLogin() {
-  const [name, setName] = useState("");
+    const navigate = useNavigate();
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const sendMail = async (e) => {
+  const loginHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const { data } = await axios.post(
-        "http://localhost:4000/send/mail",
-        {
-          name,
-          userId,
-          message,
-        },
-        {
-          withCredentials: true,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      setName("");
-      setUserId("");
-      setPassword("");
-      toast.success(data.message);
-      setLoading(false);
-    } catch (error) {
-      setLoading(false);
-      toast.error(error.response.data.message);
-    }
+    toast.success("You have successfully logged in as a student");
+    setLoading(false);
+    navigate("/student/dashboard");
   };
   return (
     <section className="login">
-      <form>
+      <form onSubmit={loginHandler}>
         <h1>STUDENT LOGIN</h1>
         <div>
           <label>Student ID</label>

@@ -1,43 +1,26 @@
 import axios from "axios";
+import "./staffLogin.css";
 import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function StaffLogin() {
-  const [name, setName] = useState("");
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const sendMail = async (e) => {
+  const loginHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const { data } = await axios.post(
-        "http://localhost:4000/send/mail",
-        {
-          name,
-          email,
-          password,
-        },
-        {
-          withCredentials: true,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      setName("");
-      setEmail("");
-      setPassword("");
-      toast.success(data.message);
-      setLoading(false);
-    } catch (error) {
-      setLoading(false);
-      toast.error(error.response.data.message);
-    }
+    toast.success("You have successfully logged in as a Staff");
+    setLoading(false);
+    navigate("/staff/dashboard");
   };
   return (
     <section className="login">
-      <form>
+      <form onSubmit={loginHandler}>
         <h1>STAFF LOGIN</h1>
         <div>
           <label>Email</label>
@@ -65,6 +48,7 @@ function StaffLogin() {
         <button
           type="submit"
           disabled={loading}
+          // onClick={()=>{}}
           style={{
             display: "flex",
             justifyContent: "center",
