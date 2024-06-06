@@ -541,7 +541,7 @@
 
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   padding: 20px;
   background: #111;
