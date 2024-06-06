@@ -19,7 +19,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 const settings = ["Profile", "Change password", "Logout ( Isaac )"];
 
 function Navbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -39,25 +39,25 @@ function Navbar() {
   };
 
   const handleDashboard = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     alert("Welcome to your dashboard");
     handleCloseNavMenu();
-  }
+  };
   const handleFees = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     alert("Fees detail");
     handleCloseNavMenu();
-  }
+  };
   const handleExam = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     alert("Examination detail");
     handleCloseNavMenu();
-  }
+  };
   const handleAttendance = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     alert("Attendance details");
     handleCloseNavMenu();
-  }
+  };
 
   return (
     <AppBar sx={{ backgroundColor: "darkblue" }} position="static">
@@ -112,24 +112,16 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem
-                onClick={handleDashboard}
-              >
+              <MenuItem onClick={handleDashboard}>
                 <Typography textAlign="center">{"Dashboard"}</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={handleFees}
-              >
+              <MenuItem onClick={handleFees}>
                 <Typography textAlign="center">{"Fees"}</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={handleExam}
-              >
+              <MenuItem onClick={handleExam}>
                 <Typography textAlign="center">{"Examination"}</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={handleAttendance}
-              >
+              <MenuItem onClick={handleAttendance}>
                 <Typography textAlign="center">{"Attendance"}</Typography>
               </MenuItem>
             </Menu>
@@ -154,7 +146,11 @@ function Navbar() {
             Isaac Appiatu
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Button onClick={()=>{navigate("/")}}>
+            <Button
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               <Avatar alt="logo" src="/sts-logo2.png" />
             </Button>
             <Button
