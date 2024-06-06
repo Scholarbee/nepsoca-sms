@@ -13,11 +13,13 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Dashboard", "Fees", "Exams", "Attendance"];
+// const pages = ["Home", "Dashboard", "Fees", "Exams", "Attendance"];
 const settings = ["Profile", "Change password", "Logout ( Isaac )"];
 
 function Navbar() {
+  const navigate = useNavigate()
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -35,6 +37,27 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const handleDashboard = (e) => {
+    e.preventDefault()
+    alert("Welcome to your dashboard");
+    handleCloseNavMenu();
+  }
+  const handleFees = (e) => {
+    e.preventDefault()
+    alert("Fees detail");
+    handleCloseNavMenu();
+  }
+  const handleExam = (e) => {
+    e.preventDefault()
+    alert("Examination detail");
+    handleCloseNavMenu();
+  }
+  const handleAttendance = (e) => {
+    e.preventDefault()
+    alert("Attendance details");
+    handleCloseNavMenu();
+  }
 
   return (
     <AppBar sx={{ backgroundColor: "darkblue" }} position="static">
@@ -89,11 +112,26 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem
+                onClick={handleDashboard}
+              >
+                <Typography textAlign="center">{"Dashboard"}</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={handleFees}
+              >
+                <Typography textAlign="center">{"Fees"}</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={handleExam}
+              >
+                <Typography textAlign="center">{"Examination"}</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={handleAttendance}
+              >
+                <Typography textAlign="center">{"Attendance"}</Typography>
+              </MenuItem>
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
@@ -116,18 +154,33 @@ function Navbar() {
             Isaac Appiatu
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Button>
+            <Button onClick={()=>{navigate("/")}}>
               <Avatar alt="logo" src="/sts-logo2.png" />
             </Button>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={handleDashboard}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              {"Dashboard"}
+            </Button>
+            <Button
+              onClick={handleFees}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              {"Fees"}
+            </Button>
+            <Button
+              onClick={handleExam}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              {"Examination"}
+            </Button>
+            <Button
+              onClick={handleAttendance}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              {"Attendance"}
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
