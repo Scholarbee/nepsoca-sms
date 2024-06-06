@@ -169,13 +169,13 @@ function Navbar() {
                 }}
               >
                 <Typography
-                  sx={{ padding: 0, margin: 0, fontSize: 12, fontWeight:"bold" }}
+                  sx={{ padding: 0, margin: 0, fontSize: 10, fontWeight:"bold" }}
                   textAlign="center"
                 >
                   Isaac Appiatu
                 </Typography>
                 <Typography
-                  sx={{ padding: 0, margin: 0, fontSize: 10 }}
+                  sx={{ padding: 0, margin: 0, fontSize: 8 }}
                   textAlign="center"
                 >
                   (Admin)
