@@ -39,7 +39,8 @@ function Navbar() {
 
   const handleDashboard = (e) => {
     e.preventDefault();
-    alert("Welcome to your dashboard");
+    navigate("/dashboard");
+    // alert("Welcome to your dashboard");
     handleCloseNavMenu();
   };
   const handleFees = (e) => {

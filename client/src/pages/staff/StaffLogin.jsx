@@ -16,7 +16,7 @@ function StaffLogin() {
     setLoading(true);
     toast.success("You have successfully logged in as a Staff");
     setLoading(false);
-    navigate("/staff/dashboard");
+    navigate("/dashboard");
   };
   return (
     <section className="login">

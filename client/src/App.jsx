@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" Component={LandingPage}></Route>
           <Route path="/staff/login" Component={StaffLogin}></Route>
-          <Route path="/staff/dashboard" Component={StaffDashboard}></Route>
+          <Route path="/dashboard" Component={StaffDashboard}></Route>
 
           <Route path="/student/login" Component={StudentLogin}></Route>
           <Route path="/student/dashboard" Component={StudentDashboard}></Route>
