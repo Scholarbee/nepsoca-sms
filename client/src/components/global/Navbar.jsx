@@ -62,26 +62,6 @@ function Navbar() {
     <AppBar sx={{ backgroundColor: "darkblue" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <img  className="logo" src={"/sts-logo2.png"} alt="logo" /> */}
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -142,7 +122,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            Isaac Appiatu
+            NEPPSOCA
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
@@ -179,11 +159,34 @@ function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/me.jpg" />
-              </IconButton>
-            </Tooltip>
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  marginRight:1
+                }}
+              >
+                <Typography
+                  sx={{ padding: 0, margin: 0, fontSize: 12, fontWeight:"bold" }}
+                  textAlign="center"
+                >
+                  Isaac Appiatu
+                </Typography>
+                <Typography
+                  sx={{ padding: 0, margin: 0, fontSize: 10 }}
+                  textAlign="center"
+                >
+                  (Admin)
+                </Typography>
+              </Box>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="sts" src="/me.jpg" />
+                </IconButton>
+              </Tooltip>
+            </Box>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
